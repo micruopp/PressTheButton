@@ -1,0 +1,18 @@
+/* root.css */
+
+:root {
+
+  /* Colors */
+
+  --white: #eeeeee;
+  --black: #212121;
+  --red: rgb(220, 1, 16);
+  --dark-red: rgb(170, 1, 16);
+  --purple: rgb(85, 26, 139);
+  --orange: rgb(247, 72, 34);
+
+  /* Fonts */
+
+  --helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}

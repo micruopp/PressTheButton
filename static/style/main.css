@@ -1,0 +1,60 @@
+/* main.css */
+
+#space {
+  background-color: var(--white);
+  color: var(--black);
+  font-family: var(--helvetica);
+}
+
+#space header,
+#space main,
+#space footer {
+  padding: 1rem;
+}
+
+#space header {}
+
+#space main {
+  /*align-content: center;*/
+  align-items: center;
+  justify-content: center;
+}
+
+#space footer {
+  font-size: 0.8rem;
+}
+
+#space p {
+  padding: 0.5rem;
+}
+
+#the-button {
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  /*background-color: var(--black);*/
+  background-color: var(--red);
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 700;
+  /* unselectable */
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#the-button:hover {
+  cursor: pointer;
+}
+
+#the-button:active {
+  border-width: 10px;
+  border-style: solid;
+  /*border-color: #c3c3c3;*/
+  border-color: var(--dark-red);
+  opacity: 0.9;
+}

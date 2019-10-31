@@ -1,0 +1,14 @@
+/* box.css */
+
+.box {
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+.box.row {
+  flex-direction: row;
+}
+
+.container.box {
+  min-height: 100%;
+}
