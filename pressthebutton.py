@@ -57,7 +57,7 @@ def not_found(err):
 # 	elif request.method == 'GET':
 # 		return render_template('layout.html', stylesheets=stylesheets, scripts=scripts, count=count)
 
-@app.route('/'):
+@app.route('/')
 	def index():
 		count = 0
 		stylesheets = gather_stylesheets()
