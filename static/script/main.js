@@ -26,8 +26,13 @@ function main() {
 	});
 
 	button.addEventListener('touchstart', function(e) {
-		let label = document.querySelector('#count');
-		label.innerHTML = "TOUCHED";
+		// let label = document.querySelector('#count');
+		// label.innerHTML = "TOUCHED";
+		button.classList.add('active-button');
+	});
+
+	button.addEventListener('touchend', function(e) {
+		button.classList.remove('active-button');
 	});
 
 	// socket.on('connection', function(msg) {
