@@ -43,24 +43,24 @@ def index():
 	scripts = gather_scripts()
 	return render_template('index.html', stylesheets=stylesheets, scripts=scripts, count=count)
 
-# @app.route('/', methods=['GET', 'POST'])
-# def index():
-# 	global count
+@app.route('/launchpad/pressthebutton', methods=['GET', 'POST'])
+def index():
+	global count
 
-# 	print("Index route hit.")
+	print("Index route hit.")
 
-# 	stylesheets = gather_stylesheets()
-# 	scripts = gather_scripts()
+	stylesheets = gather_stylesheets()
+	scripts = gather_scripts()
 
-# 	if request.method == 'POST':
-# 		count += 1
-# 		data = {
-# 			'count': count
-# 		}
-# 		return data
+	if request.method == 'POST':
+		count += 1
+		data = {
+			'count': count
+		}
+		return data
 
-# 	elif request.method == 'GET':
-# 		return render_template('layout.html', stylesheets=stylesheets, scripts=scripts, count=count)
+	elif request.method == 'GET':
+		return render_template('layout.html', stylesheets=stylesheets, scripts=scripts, count=count)
 
 if __name__ == "__main__":
 	app.run(host='127.0.0.1', port='5005')
