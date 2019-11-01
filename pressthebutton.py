@@ -42,7 +42,7 @@ def not_found(err):
 def index():
 	global count
 
-	print("Index route hit."D)
+	print("Index route hit.")
 
 	stylesheets = gather_stylesheets()
 	scripts = gather_scripts()
