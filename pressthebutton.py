@@ -11,18 +11,18 @@ def gather_stylsheets_for(route):
 def gather_stylesheets():
 	stylesheets = []
 
-	stylesheets.append(url_for('static', filename='style/root.css'))
-	stylesheets.append(url_for('static', filename='style/zero.css'))
-	stylesheets.append(url_for('static', filename='style/box.css'))
-	stylesheets.append(url_for('static', filename='style/main.css'))
+	stylesheets.append(url_for('static', filename='launchpad/static/style/root.css'))
+	stylesheets.append(url_for('static', filename='launchpad/static/style/zero.css'))
+	stylesheets.append(url_for('static', filename='launchpad/static/style/box.css'))
+	stylesheets.append(url_for('static', filename='launchpad/static/style/main.css'))
 
 	return stylesheets
 
 def gather_scripts():
 	scripts = []
 
-	scripts.append(url_for('static', filename='script/application.js'))
-	scripts.append(url_for('static', filename='script/main.js'))
+	scripts.append(url_for('static', filename='launchpad/static/script/application.js'))
+	scripts.append(url_for('static', filename='launchpad/static/script/main.js'))
 
 	return scripts
 
