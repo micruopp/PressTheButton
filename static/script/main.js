@@ -16,10 +16,10 @@ function main() {
 
 		// socket.emit('clicked', {});
 
-		// app.request(url, function(res, err) {
-		// 	let count = res;
-		// 	updateCountLabel(count);
-		// });
+		app.request(url, function(res, err) {
+			let count = res;
+			updateCountLabel(count);
+		});
 	});
 
 	// button.addEventListener('touchstart', function(e) {
