@@ -36,12 +36,12 @@ def not_found(err):
 	scripts = gather_scripts()
 	return render_template('404.html', stylesheets=stylesheets, scripts=scripts)
 
-@app.route('/')
-def index():
-	count = 0
-	stylesheets = gather_stylesheets()
-	scripts = gather_scripts()
-	return render_template('index.html', stylesheets=stylesheets, scripts=scripts, count=count)
+# @app.route('/')
+# def index():
+# 	count = 0
+# 	stylesheets = gather_stylesheets()
+# 	scripts = gather_scripts()
+# 	return render_template('index.html', stylesheets=stylesheets, scripts=scripts, count=count)
 
 @app.route('/launchpad/pressthebutton', methods=['GET', 'POST'])
 def index():
