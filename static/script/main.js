@@ -7,13 +7,14 @@ function main() {
 	let app = new Application();
 	app.log("Hello, world!");
 
-	let socket = io.connect('http://' + document.domain + ':' + location.port + '/');
+	// let socket = io.connect('http://' + document.domain + ':' + location.port + '/');
 
 	let button = document.querySelector('#the-button');
 	button.addEventListener('click', function(e) {
+		app.log("Click!");
 		let url = '/';
 
-		socket.emit('clicked', {});
+		// socket.emit('clicked', {});
 
 		// app.request(url, function(res, err) {
 		// 	let count = res;
@@ -26,14 +27,14 @@ function main() {
 	// 	label.innerHTML = "TOUCHED";
 	// });
 
-	socket.on('connection', function(msg) {
-		console.log("Socket connected.");
-	});
+	// socket.on('connection', function(msg) {
+	// 	console.log("Socket connected.");
+	// });
 
-	socket.on('count update', function(msg) {
-		let count = msg['count'];
-		updateCountLabel(count);
-	});
+	// socket.on('count update', function(msg) {
+	// 	let count = msg['count'];
+	// 	updateCountLabel(count);
+	// });
 
 	// Emit
 
