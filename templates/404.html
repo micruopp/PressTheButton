@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Press the button.</title>
+
+  {% for sheet in stylesheets %}
+  <link type="text/css" rel="stylesheet" href="{{ sheet }}">
+  {% endfor %}
+
+  {% for script in scripts %}
+  <script type="text/javascript" src="{{ script }}"></script>
+  {% endfor %}
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script> -->
+
+</head>
+<body id="space">
+  <div class="container box">
+    <header>
+      <h2>Uh oh...</h2>
+    </header>
+    <main>
+      <h3>Encountered error 404</h3>
+    </main>
+    <footer>
+      <span>Copyright &#169; 2019. All rights reserved.</span>
+    </footer>
+  </div>
+</body>
+</html>
