@@ -32,11 +32,17 @@ def gather_scripts():
 
 count = 0
 
+@app.errorhandler(404)
+def not_found(err):
+	stylesheets = gather_stylesheets()
+	scripts = gather_scripts()
+	return render_template('404.html', stylesheets=stylesheets, scripts=scripts)
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
 	global count
 
-	print("Index route hit.")
+	print("Index route hit."D)
 
 	stylesheets = gather_stylesheets()
 	scripts = gather_scripts()
