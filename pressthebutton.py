@@ -58,11 +58,11 @@ def not_found(err):
 # 		return render_template('layout.html', stylesheets=stylesheets, scripts=scripts, count=count)
 
 @app.route('/')
-	def index():
-		count = 0
-		stylesheets = gather_stylesheets()
-		scripts = gather_scripts()
-		return render_template('layout.html', stylesheets=stylesheets, scripts=scripts, count=count)
+def index():
+	count = 0
+	stylesheets = gather_stylesheets()
+	scripts = gather_scripts()
+	return render_template('layout.html', stylesheets=stylesheets, scripts=scripts, count=count)
 
 @socketio.on('clicked', namespace='/')
 def test_message(message):
