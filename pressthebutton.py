@@ -31,6 +31,7 @@ count = 0
 
 @app.errorhandler(404)
 def not_found(err):
+	print(err)
 	stylesheets = gather_stylesheets()
 	scripts = gather_scripts()
 	return render_template('404.html', stylesheets=stylesheets, scripts=scripts)
