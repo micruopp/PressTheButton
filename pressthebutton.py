@@ -62,7 +62,7 @@ def index():
 	count = 0
 	stylesheets = gather_stylesheets()
 	scripts = gather_scripts()
-	return render_template('layout.html', stylesheets=stylesheets, scripts=scripts, count=count)
+	return render_template('index.html', stylesheets=stylesheets, scripts=scripts, count=count)
 
 @socketio.on('clicked', namespace='/')
 def test_message(message):
