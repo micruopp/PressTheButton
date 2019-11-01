@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, Response, url_for
 
 app = Flask(__name__)
 # app.config['SECRET_KEY'] = 'secret!'
-app.config['APPLICATION_ROOT'] = '/launchpad/pressthebutton'
+# app.config['APPLICATION_ROOT'] = '/launchpad/pressthebutton/'
 
 def gather_stylsheets_for(route):
 	# '/' -> 'style/*.css'
@@ -12,18 +12,18 @@ def gather_stylsheets_for(route):
 def gather_stylesheets():
 	stylesheets = []
 
-	stylesheets.append(url_for('static', filename='static/style/root.css'))
-	stylesheets.append(url_for('static', filename='static/style/zero.css'))
-	stylesheets.append(url_for('static', filename='static/style/box.css'))
-	stylesheets.append(url_for('static', filename='static/style/main.css'))
+	stylesheets.append(url_for('launchpad/pressthebutton/static', filename='style/root.css'))
+	stylesheets.append(url_for('launchpad/pressthebutton/static', filename='style/zero.css'))
+	stylesheets.append(url_for('launchpad/pressthebutton/static', filename='style/box.css'))
+	stylesheets.append(url_for('launchpad/pressthebutton/static', filename='style/main.css'))
 
 	return stylesheets
 
 def gather_scripts():
 	scripts = []
 
-	scripts.append(url_for('static', filename='static/script/application.js'))
-	scripts.append(url_for('static', filename='static/script/main.js'))
+	scripts.append(url_for('launchpad/pressthebutton/static', filename='script/application.js'))
+	scripts.append(url_for('launchpad/pressthebutton/static', filename='script/main.js'))
 
 	return scripts
 
