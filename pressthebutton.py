@@ -38,23 +38,30 @@ def not_found(err):
 	scripts = gather_scripts()
 	return render_template('404.html', stylesheets=stylesheets, scripts=scripts)
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
-	global count
+# @app.route('/', methods=['GET', 'POST'])
+# def index():
+# 	global count
 
-	print("Index route hit.")
+# 	print("Index route hit.")
 
-	stylesheets = gather_stylesheets()
-	scripts = gather_scripts()
+# 	stylesheets = gather_stylesheets()
+# 	scripts = gather_scripts()
 
-	if request.method == 'POST':
-		count += 1
-		data = {
-			'count': count
-		}
-		return data
+# 	if request.method == 'POST':
+# 		count += 1
+# 		data = {
+# 			'count': count
+# 		}
+# 		return data
 
-	elif request.method == 'GET':
+# 	elif request.method == 'GET':
+# 		return render_template('layout.html', stylesheets=stylesheets, scripts=scripts, count=count)
+
+@app.route('/'):
+	def index():
+		count = 0
+		stylesheets = gather_stylesheets()
+		scripts = gather_scripts()
 		return render_template('layout.html', stylesheets=stylesheets, scripts=scripts, count=count)
 
 @socketio.on('clicked', namespace='/')
