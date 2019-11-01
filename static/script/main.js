@@ -12,7 +12,7 @@ function main() {
 	let button = document.querySelector('#the-button');
 	button.addEventListener('click', function(e) {
 		app.log("Click!");
-		let url = '/';
+		let url = '/launchpad/pressthebutton';
 
 		// socket.emit('clicked', {});
 
