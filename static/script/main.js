@@ -9,6 +9,7 @@ function main() {
 
 	let path = '/launchpad/pressthebutton/';
 	let socket = io.connect('http://' + document.domain + ':' + location.port + path);
+	console.log(document.domain);
 
 	let button = document.querySelector('#the-button');
 	button.addEventListener('click', function(e) {
